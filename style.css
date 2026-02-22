@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (min-width: 300px) {
+
+    body {
+        overflow-y: hidden;
+    }
+
+    #calculator {
+        max-width: 345px !important;
+    }
+}
+
+/* Variables */
+:root {
+    --calc-color: rgba(255, 255, 255, 0.42);
+    --bg-main: linear-gradient(#0e1b34, #32537a);
+    --glass-bg: linear-gradient(#2b2b2b, #1c1c1c);
+    --btn-dark: rgba(0, 0, 0, 0.75);
+    --btn-light: #eaeaea;
+    --text-light: #ffffff;
+    --eval: #ff9500;
+}
+
+/* Background */
+body {
+    background-color: var(--bg-main);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-main);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Calculator Card */
+#calculator {
+    width: 100%;
+    max-width: 370px !important;
+    padding: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    background: var(--calc-color);
+    border-radius: 2rem;
+}
+
+/* Display */
+#input {
+    width: 100%;
+    padding: 18px;
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+    text-align: right;
+    border-radius: 14px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.85);
+    color: #000;
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 14px;
+}
+
+/* Keypad */
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+/* Buttons */
+#keys button {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: none;
+    background: var(--btn-dark);
+    color: var(--text-light);
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    transition: all 0.17s ease;
+}
+
+/* Hover & Active */
+#keys button:hover {
+    transform: translateY(-2px);
+}
+
+#keys button:active {
+    transform: scale(0.9);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Operators */
+.maths {
+    background: var(--btn-light) !important;
+    color: #000 !important;
+    font-weight: 600;
+}
+
+/* Equal */
+.evaluate {
+    background: var(--eval) !important;
+    color: #000 !important;
+    font-weight: bold;
+    box-shadow: 0 8px 18px rgba(255, 149, 0, 0.6);
+}
+
+/* Clear & Delete */
+.gray {
+    background: rgba(255, 255, 255, 0.25) !important;
+    color: #000 !important;
+    font-weight: 600;
+}
+
+.gray:nth-child(2) {
+    background: #fff !important;
+}
+
+.gray:nth-child(2) i {
+    font-size: 2rem;
+}
