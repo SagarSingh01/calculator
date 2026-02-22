@@ -40,7 +40,7 @@ body {
 /* Calculator Card */
 #calculator {
     width: 100%;
-    max-width: 370px !important;
+    max-width: 360px !important;
     padding: 24px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -126,4 +126,5 @@ body {
 
 .gray:nth-child(2) i {
     font-size: 2rem;
+
 }
