@@ -4,38 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Scientific Calculator</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <div id="calculator">
-        <input type="text" id="input">
-        <div id="keys">
-            <button onclick="clearDisplay()" class="gray">AC</button>
-            <button onclick="percent()">%</button>
-            <button onclick="del()" class="gray"><i class="material-icons">backspace</i></button>
-            <button onclick="display(event)" class="maths">&#247</button>
-            <button onclick="display(event)">7</button>
-            <button onclick="display(event)">8</button>
-            <button onclick="display(event)">9</button>
-            <button onclick="display(event)" class="maths">x</button>
-            <button onclick="display(event)">4</button>
-            <button onclick="display(event)">5</button>
-            <button onclick="display(event)">6</button>
-            <button onclick="display(event)" class="maths">-</button>
-            <button onclick="display(event)">1</button>
-            <button onclick="display(event)">2</button>
-            <button onclick="display(event)">3</button>
-            <button onclick="display(event)" class="maths">+</button>
-            <button onclick="display(event)">00</button>
-            <button onclick="display(event)">0</button>
-            <button onclick="display(event)">.</button>
-            <button onclick="calculate()" class="evaluate">=</button>
-        </div>
+    <input type="text" id="input" readonly>
+
+    <!-- 🔬 Scientific Section -->
+    <div class="scientific">
+        <button onclick="trigFunc('sin(')">sin</button>
+        <button onclick="trigFunc('cos(')">cos</button>
+        <button onclick="trigFunc('tan(')">tan</button>
+        <button onclick="trigFunc('log(')">log</button>
+
+        <button onclick="power()">x²</button>
+        <button onclick="sqrt()">√</button>
+        <button onclick="display(event)">(</button>
+        <button onclick="display(event)">)</button>
     </div>
+
+    <!-- 🔢 Main Calculator -->
+    <div id="keys">
+        <button onclick="clearDisplay()" class="gray">AC</button>
+        <button onclick="percent()">%</button>
+        <button onclick="del()" class="gray">
+            <i class="material-icons">backspace</i>
+        </button>
+        <button onclick="display(event)" class="maths">&#247</button>
+
+        <button onclick="display(event)">7</button>
+        <button onclick="display(event)">8</button>
+        <button onclick="display(event)">9</button>
+        <button onclick="display(event)" class="maths">x</button>
+
+        <button onclick="display(event)">4</button>
+        <button onclick="display(event)">5</button>
+        <button onclick="display(event)">6</button>
+        <button onclick="display(event)" class="maths">-</button>
+
+        <button onclick="display(event)">1</button>
+        <button onclick="display(event)">2</button>
+        <button onclick="display(event)">3</button>
+        <button onclick="display(event)" class="maths">+</button>
+
+        <button onclick="display(event)">00</button>
+        <button onclick="display(event)">0</button>
+        <button onclick="display(event)">.</button>
+        <button onclick="calculate()" class="evaluate">=</button>
+    </div>
+</div>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 
 </html>

@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 
-@media (min-width: 300px) {
-
+/* Mobile UI */
+@media (max-width: 400px) {
     body {
         overflow-y: hidden;
     }
@@ -13,36 +13,47 @@
     #calculator {
         max-width: 320px !important;
     }
+
+    #keys {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .scientific button {
+        font-size: 0.75rem;
+        padding: 8px 0;
+    }
 }
 
 /* Variables */
 :root {
-    --calc-color: rgba(255, 255, 255, 0.42);
-    --bg-main: linear-gradient(#0e1b34, #32537a);
-    --glass-bg: linear-gradient(#2b2b2b, #1c1c1c);
-    --btn-dark: rgba(0, 0, 0, 0.75);
-    --btn-light: #eaeaea;
-    --text-light: #ffffff;
+    --calc-color: rgba(8, 12, 35, 0.6);
+    --glass-bg: linear-gradient(135deg, rgba(0, 255, 255, 0.05), rgba(139, 92, 246, 0.05));
+    --bg-main: radial-gradient(circle at 20% 30%, #00f0ff33, transparent 40%),
+        radial-gradient(circle at 80% 70%, #8b5cf633, transparent 40%),
+        linear-gradient(135deg, #020617, #050816, #000000);
+    --btn-dark: rgba(10, 15, 35, 0.9);
+    --btn-light: linear-gradient(135deg, #00f0ff, #8b5cf6);
+    --text-light: #e0f7ff;
     --eval: #ff9500;
 }
 
 /* Background */
 body {
-    background-color: var(--bg-main);
+    background: var(--bg-main);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--bg-main);
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
 /* Calculator Card */
 #calculator {
     width: 100%;
-    max-width: 370px !important;
+    max-width: 370px;
     padding: 24px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6),
+        inset 0 1px 1px rgba(255, 255, 255, 0.2);
     border: 2px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(15px);
     background: var(--calc-color);
@@ -52,7 +63,7 @@ body {
 /* Display */
 #input {
     width: 100%;
-    padding: 18px;
+    padding: 10px 18px;
     font-size: clamp(1.6rem, 5vw, 2.4rem);
     text-align: right;
     border-radius: 14px;
@@ -62,6 +73,38 @@ body {
     color: #000;
     box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.15);
     margin-bottom: 14px;
+}
+
+/* Scientific Section */
+.scientific {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+/* Scientific buttons */
+.scientific button {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 12px;
+    background: rgba(10, 15, 35, 0.9);
+    border: 1px solid rgba(0, 255, 255, 0.589);
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5),
+        inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    transition: all 0.17s ease;
+    opacity: 0.95;
+}
+
+.scientific button:hover {
+    transform: translateY(-2px);
+}
+
+.scientific button:active {
+    transform: scale(0.9);
 }
 
 /* Keypad */
@@ -76,7 +119,7 @@ body {
     width: 100%;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    border: none;
+    border: 1px solid rgba(255, 0, 0, 0.445);
     background: var(--btn-dark);
     color: var(--text-light);
     font-size: clamp(1.4rem, 4vw, 2.2rem);
@@ -84,7 +127,8 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5),
+        inset 0 1px 1px rgba(255, 255, 255, 0.15);
     transition: all 0.17s ease;
 }
 
@@ -110,10 +154,11 @@ body {
     background: var(--eval) !important;
     color: #000 !important;
     font-weight: bold;
+    border: 2px solid #fff!important;
     box-shadow: 0 8px 18px rgba(255, 149, 0, 0.6);
 }
 
-/* Clear & Delete */
+/* Utility */
 .gray {
     background: rgba(255, 255, 255, 0.25) !important;
     color: #000 !important;
