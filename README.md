@@ -76,6 +76,10 @@ Or use VS Code Live Server.
 
 ---
 
+## 📸 Preview
+
+<img width="1822" height="867" alt="image" src="https://github.com/user-attachments/assets/4a4ff046-7053-47d8-aaad-bb1ae02c22bb" />
+
 # 🌐 Live Demo
 
 Experience the calculator in your browser:
@@ -83,10 +87,6 @@ Experience the calculator in your browser:
 https://sagarsingh01.github.io/calculator/
 
 ---
-
-## 📸 Preview
-
-<img width="1822" height="867" alt="image" src="https://github.com/user-attachments/assets/4a4ff046-7053-47d8-aaad-bb1ae02c22bb" />
 
 ## 🤝 Contributing
 
