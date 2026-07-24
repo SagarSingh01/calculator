@@ -115,15 +115,32 @@ git push origin feature-name
 
 ---
 
-## ⭐ Show Your Support
-
-If you found this project helpful, consider giving it a ⭐ on GitHub.
-
 ---
 
 <div align="center">
 
-### Built with ❤️ using HTML, CSS & JavaScript
+## 🌟 Thank You for Visiting
+
+If you found this project useful, please consider giving it a ⭐ on GitHub. Your support motivates me to build more open-source projects.
+
+<br>
+
+**Made with ❤️ using HTML, CSS & JavaScript**
+
+<br>
+
+<a href="https://github.com/SagarSingh01">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github" alt="GitHub"/>
+</a>
+&nbsp;
+<a href="https://www.linkedin.com/in/sagar-singh001">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn"/>
+</a>
+&nbsp;
+<a href="mailto:sagar12378089@gmail.com">
+  <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+</a>
+<br><br>
+**⭐ Don't forget to Star this repository if you enjoyed it! ⭐**
 
 </div>
-```
